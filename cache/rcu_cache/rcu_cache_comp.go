@@ -48,14 +48,15 @@ func (c *rwm_cache[K, V]) Flush() {
 }
 
 type nlcache[K comparable, V comparable] struct {
-	cache map[string]int
+	cache map[K]V
 }
 
-func (c *nlcache[K, V]) Get(key string) int {
-	return c.cache[key]
+func (c *nlcache[K, V]) Get(key K) (V, bool) {
+	v, ok := c.cache[key]
+	return v, ok
 }
 
-func (c *nlcache[K, V]) Set(key string, value int) {
+func (c *nlcache[K, V]) Set(key K, value V) {
 	c.cache[key] = value
 }
 
