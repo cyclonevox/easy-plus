@@ -4,6 +4,8 @@ import (
 	"sync"
 )
 
+// 本文件仅仅用几种不同的实现来实现接口，作为和rcu_cache之间的对比 并非是用于日常代码使用
+
 type sync_cache[K comparable, V comparable] struct {
 	cache sync.Map
 }
