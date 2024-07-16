@@ -10,5 +10,6 @@
 easy提供的功能可参考其文档说明，而easy-plus添加的包中包含说明
 
 easy-plus已经包含或将会包含以下功能：
-+ cache
-+ jwt
++ cache：简单的cache实现
++ jwtx: 包装了一些jwt常用的方法
++ validatorx: 包装增加了一些验证的tag
