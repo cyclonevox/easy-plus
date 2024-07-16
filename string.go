@@ -70,3 +70,13 @@ func Camel(str string) string {
 	}
 	return buf.String()
 }
+
+// InitialLowercase 首字母小写
+func InitialLowercase(from string) (to string) {
+	for i, v := range from {
+		to = string(unicode.ToLower(v)) + from[i+1:]
+		break
+	}
+
+	return
+}
