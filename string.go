@@ -37,16 +37,6 @@ func Underscore(str string) string {
 	return buf.String()
 }
 
-// InitialLowercase Lowercase first letter 首字母小写
-func InitialLowercase(from string) (to string) {
-	for i, v := range from {
-		to = string(unicode.ToLower(v)) + from[i+1:]
-		break
-	}
-
-	return
-}
-
 // Camel converts string to camel case.
 func Camel(str string) string {
 	if str == "" {
